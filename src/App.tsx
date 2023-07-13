@@ -5,11 +5,11 @@ import './App.css';
 import Navbar from './components/navbar';
 import Header from './components/header';
 import Footer from './components/footer';
-import catData from './data/cat-data';
+import {catData} from './data/cat-data';
 
 function App(): JSX.Element {
 
-	const [ cats, setCats ] = useState<Array<Cat>>(catData);
+	const [ cats ] = useState<Array<Cat>>(catData);
 
 	return (
 		<>
