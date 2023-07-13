@@ -86,7 +86,7 @@ function App(): JSX.Element {
 	return (
 		<>
 			<Navbar />
-			<Header />
+			<Header count={cats.length}/>
 
 			<main>
 				<div className='cards__wrapper'>	{
