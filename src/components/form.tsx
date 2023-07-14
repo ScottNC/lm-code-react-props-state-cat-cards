@@ -34,7 +34,7 @@ function Form({ setAnimals }: FormProps): JSX.Element {
     <form onSubmit={handleSubmit}>
       <div>
         <label className="form__text" >What animal is the new pet? </label>
-        <select className="form__text" ref={typeRef}>
+        <select className="form__text form__text--answer form__text--answer--select" ref={typeRef}>
           <option value="cat">Cat</option>
           <option value="dog">Dog</option>
         </select>

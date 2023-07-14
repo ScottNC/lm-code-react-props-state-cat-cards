@@ -93,10 +93,18 @@ body {
 	font-size: 1.7rem;
 	margin: 0.2em;
 	font-family: 'SleepyCat';
+	border-radius: 7px;
 }
 
 .form__text--answer {
 	width: 100%;
+}
+
+.form__text--answer--select {
+	width: auto;
+	background-color: var(--red);
+	border-color: var(--yellow);
+	color: var(--light);
 }
 
 .form__text--answer--fill {
