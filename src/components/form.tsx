@@ -1,4 +1,5 @@
 import { Dispatch, FormEvent, SetStateAction, useRef } from "react";
+import { v4 as uuidv4 } from 'uuid';
 import Animal from "../data/animal";
 
 interface FormProps {
@@ -21,10 +22,11 @@ function Form({ setAnimals }: FormProps): JSX.Element {
     const species = speciesRef.current?.value;
     const favFoods = favFoodsRef.current?.value.split('/[ ,]+/');
     const birthYear = parseInt(birthYearRef.current?.value ?? '');
+    const id = uuidv4();
 
     if (type && name && species && favFoods && birthYear !==undefined)
       setAnimals(allAnimals => {
-        return allAnimals.concat({name, species, favFoods, birthYear, type});
+        return allAnimals.concat({id, name, species, favFoods, birthYear, type});
       });
   };
 
