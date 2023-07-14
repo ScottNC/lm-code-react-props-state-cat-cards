@@ -10,14 +10,16 @@ interface AnimalCardProps{
   animalIndex: number;
 }
 
-const AnimalCard : React.FC<AnimalCardProps>  = ({name, species, favFoods, birthYear, animalIndex}) => {
+const getClass = (type: 'cat' | 'dog' | undefined, initialClass: string) => initialClass + (type ? ` ${initialClass}--${type}` : '');
+
+const AnimalCard : React.FC<AnimalCardProps>  = ({name, species, favFoods, birthYear, animalIndex, type}) => {
 
   return (
-    <div className="card">
-        <h3 className="card__text card__header">{name}</h3>
-        <p className="card__text">Species: {species}</p>
-        <p className="card__text">Favourite Food(s): {favFoods.join(', ')}</p>
-        <p className="card__text">Birth Year: {birthYear}</p>
+    <div className={getClass(type, "card")}>
+        <h3 className={getClass(type, "card__text") + " " + getClass(type, "card__header")}>{name}</h3>
+        <p className={getClass(type, "card__text")}>Species: {species}</p>
+        <p className={getClass(type, "card__text")}>Favourite Food(s): {favFoods.join(', ')}</p>
+        <p className={getClass(type, "card__text")}>Birth Year: {birthYear}</p>
         {animalIndex < images.length && (<CatImage 
           image={images[animalIndex].image}
           altText={images[animalIndex].altText}

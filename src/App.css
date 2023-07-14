@@ -16,6 +16,17 @@
 	src: local('Cattino'), url(./fonts/Cattino.otf) format('woff');
 }
 
+@font-face {
+	font-family: 'Beware of the Dog';
+	src: local('Beware of the Dog'), url('./fonts/Beware of the Dog.ttf') format('woff');
+}
+
+@font-face {
+	font-family: 'TheDogAteMyHomework';
+	src: local('TheDogAteMyHomework'), url(./fonts/TheDogAteMyHomework.otf) format('woff');
+}
+
+
 body {
 	background-color: var(--light);
 	display: flex;
@@ -52,15 +63,24 @@ body {
 
 .card {
 	padding: 1.5em;
-	border: 6px solid var(--red);
+	
 	max-width: 15.625em;
 	min-width: 11.25em;
 	border-radius: 7px;
-	background: var(--yellow);
 	margin-bottom: 1em;
 	box-shadow: 0 4px 8px 0 rgb(13, 59, 102, 0.4);
 	transition: 0.3s;
 	margin: 0.5em;
+}
+
+.card--cat {
+	border: 6px solid var(--red);
+	background: var(--yellow);
+}
+
+.card--dog {
+	border: 6px solid var(--yellow);
+	background: var(--red);
 }
 
 .card:hover {
@@ -69,9 +89,16 @@ body {
 
 .card__text {
 	color: var(--navy);
-	font-family: 'SleepyCat';
 	font-size: 1.7rem;
 	margin: 0.2em;
+}
+
+.card__text--cat {
+	font-family: 'SleepyCat';
+}
+
+.card__text--dog {
+	font-family: 'TheDogAteMyHomework';
 }
 
 .card__text__small {
