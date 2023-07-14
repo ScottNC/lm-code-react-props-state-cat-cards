@@ -6,10 +6,11 @@ import Navbar from './components/navbar';
 import Header from './components/header';
 import Footer from './components/footer';
 import { animalData } from './data/all-data';
+import Form from './components/form';
 
 function App(): JSX.Element {
 
-	const [ animals ] = useState<Array<Animal>>(animalData);
+	const [ animals, setAnimals ] = useState<Array<Animal>>(animalData);
 
 	return (
 		<>
@@ -33,6 +34,11 @@ function App(): JSX.Element {
 						/>
 				))}
 				</div>
+
+				<div>
+					<Form setAnimals={setAnimals}/>
+				</div>
+				
 			</main>
 
 			<Footer />
