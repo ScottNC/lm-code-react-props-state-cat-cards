@@ -1,31 +1,32 @@
 import { useState } from 'react';
-import Cat from './data/cat';
-import CatCard from './components/cat_card';
+import Animal from './data/animal';
+import AnimalCard from './components/animal_card';
 import './App.css';
 import Navbar from './components/navbar';
 import Header from './components/header';
 import Footer from './components/footer';
-import {catData} from './data/cat-data';
+import { animalData } from './data/all-data';
 
 function App(): JSX.Element {
 
-	const [ cats ] = useState<Array<Cat>>(catData);
+	const [ animals ] = useState<Array<Animal>>(animalData);
 
 	return (
 		<>
 			<Navbar />
-			<Header count={cats.length}/>
+			<Header count={animals.length}/>
 
 			<main>
 				<div className='cards__wrapper'>	{
-					cats.map((cat, index) => (
-						<CatCard
-							key={cat.id}
-							name={cat.name}
-							species={cat.species}
-							favFoods={cat.favFoods}
-							birthYear={cat.birthYear}
-							catIndex={index}
+					animals.map((animal, index) => (
+						<AnimalCard
+							key={animal.id}
+							type={animal.type}
+							name={animal.name}
+							species={animal.species}
+							favFoods={animal.favFoods}
+							birthYear={animal.birthYear}
+							animalIndex={index}
 						/>
 				))}
 				</div>

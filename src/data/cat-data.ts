@@ -1,5 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
-import Cat from './cat';
+import Animal from './animal';
 import Image from './image';
 
 import cat1 from '../assets/images/cat1.jpg';
@@ -15,7 +14,7 @@ import cat10 from '../assets/images/cat10.jpg';
 import cat11 from '../assets/images/cat11.jpg';
 import cat12 from '../assets/images/cat12.jpg';
 
-export const catData: Cat[] = [
+export const catData: Animal[] = [
   {
     name: 'Little Miss Purrfect',
     species: 'Cat',
@@ -197,11 +196,3 @@ export const images: Image[] = [
     }
   ];
   
-
-catData.forEach((cat, index) => {
-	const id = uuidv4();
-	cat.id = id;
-
-  if (images[index])
-    images[index].id = id;
-});
