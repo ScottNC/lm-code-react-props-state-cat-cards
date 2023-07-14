@@ -22,7 +22,7 @@ function Form({ setAnimals }: FormProps): JSX.Element {
     const favFoods = favFoodsRef.current?.value.split('/[ ,]+/');
     const birthYear = parseInt(birthYearRef.current?.value ?? '');
 
-    if (name && species && favFoods && birthYear !==undefined)
+    if (type && name && species && favFoods && birthYear !==undefined)
       setAnimals(allAnimals => {
         return allAnimals.concat({name, species, favFoods, birthYear, type});
       });
@@ -38,22 +38,22 @@ function Form({ setAnimals }: FormProps): JSX.Element {
         </select>
       </div>
       <div>
-        <label className="form__text" >Name</label>
-        <input type="text" className="form__text" ref={nameRef} />
+        <label className="form__text" >Name:</label>
+        <input type="text" className="form__text form__text--answer form__text--answer--fill" ref={nameRef} />
       </div>
       <div>
-        <label className="form__text" >Species</label>
-        <input type="text" className="form__text" ref={speciesRef} />
+        <label className="form__text" >Species:</label>
+        <input type="text" className="form__text form__text--answer form__text--answer--fill" ref={speciesRef} />
       </div>
       <div>
-        <label className="form__text" >Favourite Foods</label>
-        <input type="text" className="form__text" ref={favFoodsRef} />
+        <label className="form__text" >Favourite Foods:</label>
+        <input type="text" className="form__text form__text--answer form__text--answer--fill" ref={favFoodsRef} />
       </div>
       <div>
-        <label className="form__text" >Birth Year</label>
-        <input type="text" className="form__text" ref={birthYearRef} />
+        <label className="form__text" >Birth Year:</label>
+        <input type="text" className="form__text form__text--answer form__text--answer--fill" ref={birthYearRef} />
       </div>
-      <button className="form__text form__text--submit" type="submit">Submit</button>
+      <button className="form__text form__text--answer form__text--answer--submit" type="submit">Submit</button>
     </form>
   );
 }

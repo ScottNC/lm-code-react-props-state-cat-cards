@@ -95,8 +95,16 @@ body {
 	font-family: 'SleepyCat';
 }
 
-.form__text--submit {
+.form__text--answer {
 	width: 100%;
+}
+
+.form__text--answer--fill {
+	background-color: var(--yellow);
+	border-color: var(--red);
+}
+
+.form__text--answer--submit {
 	background-color: var(--red);
 	border-color: var(--yellow);
 }
