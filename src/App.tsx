@@ -35,7 +35,10 @@ function App(): JSX.Element {
 				))}
 				</div>
 
-				<div>
+				<div className='form'>
+					<h2 className='header__title'>
+						Add a new pet:
+					</h2>
 					<Form setAnimals={setAnimals}/>
 				</div>
 				

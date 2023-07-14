@@ -31,29 +31,29 @@ function Form({ setAnimals }: FormProps): JSX.Element {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="type">What animal is the new pet? </label>
-        <select ref={typeRef}>
+        <label className="form__text" >What animal is the new pet? </label>
+        <select className="form__text" ref={typeRef}>
           <option value="cat">Cat</option>
           <option value="dog">Dog</option>
         </select>
       </div>
       <div>
-        <label htmlFor="name">Name</label>
-        <input type="text" ref={nameRef} />
+        <label className="form__text" >Name</label>
+        <input type="text" className="form__text" ref={nameRef} />
       </div>
       <div>
-        <label htmlFor="species">Species</label>
-        <input type="text" ref={speciesRef} />
+        <label className="form__text" >Species</label>
+        <input type="text" className="form__text" ref={speciesRef} />
       </div>
       <div>
-        <label htmlFor="favFoods">Favourite Foods</label>
-        <input type="text" ref={favFoodsRef} />
+        <label className="form__text" >Favourite Foods</label>
+        <input type="text" className="form__text" ref={favFoodsRef} />
       </div>
       <div>
-        <label htmlFor="birthYear">Birth Year</label>
-        <input type="text" ref={birthYearRef} />
+        <label className="form__text" >Birth Year</label>
+        <input type="text" className="form__text" ref={birthYearRef} />
       </div>
-      <button type="submit">Submit</button>
+      <button className="form__text form__text--submit" type="submit">Submit</button>
     </form>
   );
 }
