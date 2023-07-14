@@ -14,7 +14,10 @@ function App(): JSX.Element {
 	return (
 		<>
 			<Navbar />
-			<Header count={animals.length}/>
+			<Header
+				catCount={animals.filter(animal => animal.type === 'cat').length}
+				dogCount={animals.filter(animal => animal.type === 'dog').length}
+			/>
 
 			<main>
 				<div className='cards__wrapper'>	{

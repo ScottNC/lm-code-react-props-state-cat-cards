@@ -17,8 +17,8 @@
 }
 
 @font-face {
-	font-family: 'Beware of the Dog';
-	src: local('Beware of the Dog'), url('./fonts/Beware of the Dog.ttf') format('woff');
+	font-family: 'GOODDC__';
+	src: local('GOODDC__'), url(./fonts/GOODDC__.TTF) format('woff');
 }
 
 @font-face {
@@ -44,6 +44,14 @@ body {
 .header__title {
 	color: var(--navy);
 	font-family: 'Cattino';
+}
+
+.header__title--cat {
+	font-family: 'Cattino';
+}
+
+.header__title--dog {
+	font-family: 'TheDogAteMyHomework';
 }
 
 .header__welcome {
@@ -98,7 +106,7 @@ body {
 }
 
 .card__text--dog {
-	font-family: 'TheDogAteMyHomework';
+	font-family: 'GOODDC__';
 }
 
 .card__text__small {
